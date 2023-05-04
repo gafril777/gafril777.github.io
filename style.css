@@ -1,0 +1,16 @@
+body {
+  background-color: #f3f4f5;
+}
+.jumbotron {
+  padding-top: 9rem;
+  background-color: #e2edff;
+}
+
+#Character {
+  background-color: #e2edff;
+}
+
+.col h2 {
+  padding-top: 5px;
+  margin-bottom: 30px;
+}
