@@ -10,6 +10,7 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+
     <!--My Css-->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -238,7 +239,19 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-8">
-            <form>
+            <div
+              class="alert alert-success alert-dismissible fade show d-none my-Alert"
+              role="alert"
+            >
+              <strong>Terimakasih!!!</strong> Pesan anda sudah saya terima ^_^.
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="alert"
+                aria-label="Close"
+              ></button>
+            </div>
+            <form name="Form">
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email</label>
                 <input
@@ -246,6 +259,7 @@
                   class="form-control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
+                  name="Email"
                 />
                 <div id="emailHelp" class="form-text">
                   We'll never share your email with anyone else.
@@ -258,13 +272,33 @@
                   class="form-control"
                   id="Name"
                   aria-describedby="Name"
+                  name="Name"
                 />
               </div>
               <div id="contact" class="mb-3">
                 <label for="Message" class="form-label">Message</label>
-                <textarea class="form-control" id="Message" rows="4"></textarea>
+                <textarea
+                  class="form-control"
+                  id="Message"
+                  rows="4"
+                  name="Message"
+                ></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary btn-Submit">
+                Submit
+              </button>
+              <button
+                class="btn btn-primary btn-loading d-none"
+                type="button"
+                disabled
+              >
+                <span
+                  class="spinner-border spinner-border-sm"
+                  role="status"
+                  aria-hidden="true"
+                ></span>
+                Loading...
+              </button>
             </form>
           </div>
         </div>
@@ -328,5 +362,31 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbx_JO549tzPBdk-FCDOI5td3LqK1ML-srJYbjznCuYL7i_8i77lcdUwjaFBq7WE1xo_/exec";
+      const form = document.forms["Form"];
+      const btnSubmit = document.querySelector(".btn-Submit");
+      const btnLoading = document.querySelector(".btn-loading");
+      const myAlert = document.querySelector(".my-Alert");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        //Ketika tombol submit diklik
+        //tampilkan tombol loading, hilangkan tombol kirim
+        btnLoading.classList.toggle("d-none");
+        btnSubmit.classList.toggle("d-none");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            //Tampilkan tombol kirim , hilangkan tombol loading
+            btnLoading.classList.toggle("d-none");
+            btnSubmit.classList.toggle("d-none");
+            //Tampilkan Alert
+            myAlert.classList.toggle("d-none");
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
