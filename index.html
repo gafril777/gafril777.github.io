@@ -13,6 +13,8 @@
 
     <!--My Css-->
     <link rel="stylesheet" href="style.css" />
+    <!--AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <!--Navbar -->
@@ -36,7 +38,9 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#Home"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">About</a>
@@ -59,8 +63,17 @@
         alt="GafrilF"
         width="350"
         class="rounded-circle img-thumbnail"
+        data-aos="flip-left"
+        data-aos-duration="1000"
+        data-aos-offset="250"
+        data-aos-delay="60"
       />
-      <h1 class="display-4">Gafril Fakhrendi</h1>
+      <h1
+        class="display-4"
+        class="position-absolute top-50 start-50 data-aos=flip-left data-aos-offset=250 data-aos-delat=200 data-aos-duration=1000"
+      >
+        Gafril Fakhrendi
+      </h1>
       <p class="lead">Mahasiswa | Freelancer</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
@@ -79,13 +92,25 @@
     <!--About-->
     <section id="about">
       <div class="container">
-        <div class="row text-center m-5">
-          <div class="col">
-            <h2>About Me</h2>
+        <div
+          class="row text-center m-5"
+          data-aos="fade-down"
+          data-aos-offset="250"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+        >
+          <div class="col mt-5">
+            <h1>About Me</h1>
           </div>
         </div>
         <div class="row justify-content-center fs-5">
-          <div class="col-md-4">
+          <div
+            class="col-md-4"
+            data-aos="fade-right"
+            data-aos-offset="250"
+            data-aos-delay="200"
+            data-aos-duration="850"
+          >
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
               nulla illum dolorum, reprehenderit consectetur odio itaque amet
@@ -96,11 +121,21 @@
               voluptatum nemo.
             </p>
           </div>
-          <div class="col-md-4">
+          <div
+            class="col-md-4"
+            data-aos="fade-left"
+            data-aos-offset="250"
+            data-aos-delay="200"
+            data-aos-duration="750"
+          >
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi qui
-              voluptatibus, odio, officia maxime error atque itaque alias
-              cupiditate facilis eius quaerat rerum ex sunt.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+              exercitationem deserunt illo unde molestias quidem recusandae odio
+              consequatur expedita quo! Recusandae quasi maxime aliquam nesciunt
+              veritatis, perspiciatis reiciendis modi architecto non eveniet
+              quos ratione quia nisi eius voluptatem commodi aliquid eum
+              deleniti illum reprehenderit, laborum dicta vero? Saepe, molestias
+              pariatur?
             </p>
           </div>
         </div>
@@ -120,12 +155,24 @@
     <section id="Character">
       <div class="container">
         <div class="row text-center">
-          <div class="col">
+          <div
+            class="col"
+            data-aos="zoom-in-down"
+            data-aos-offset="200"
+            data-aos-delay="200"
+            data-aos-duration="850"
+          >
             <h2>My Main</h2>
           </div>
           <div class="row justify-content-center">
             <div class="col-md-4 mb-5">
-              <div class="card">
+              <div
+                class="card"
+                data-aos="fade-right"
+                data-aos-offset="200"
+                data-aos-delay="200"
+                data-aos-duration="850"
+              >
                 <img src="img/1.jpg" class="card-img-top" alt="Genji" />
                 <div class="card-body">
                   <h5 class="card-title">Genji</h5>
@@ -143,7 +190,13 @@
               </div>
             </div>
             <div class="col-md-4 mb-5">
-              <div class="card">
+              <div
+                class="card"
+                data-aos="fade-down"
+                data-aos-offset="200"
+                data-aos-delay="200"
+                data-aos-duration="850"
+              >
                 <img src="img/2.jpg" class="card-img-top" alt="Hanzo" />
                 <div class="card-body">
                   <h5 class="card-title">Hanzo</h5>
@@ -161,7 +214,13 @@
               </div>
             </div>
             <div class="col-md-4 mb-5">
-              <div class="card">
+              <div
+                class="card"
+                data-aos="fade-left"
+                data-aos-offset="200"
+                data-aos-delay="200"
+                data-aos-duration="850"
+              >
                 <img src="img/3.jpg" class="card-img-top" alt="Reyna" />
                 <div class="card-body">
                   <h5 class="card-title">Reyna</h5>
@@ -179,7 +238,13 @@
               </div>
             </div>
             <div class="col-md-4 mb-5">
-              <div class="card">
+              <div
+                class="card"
+                data-aos="fade-up-right"
+                data-aos-offset="200"
+                data-aos-delay="200"
+                data-aos-duration="850"
+              >
                 <img src="img/4.jpg" class="card-img-top" alt="Octane" />
                 <div class="card-body">
                   <h5 class="card-title">Octane</h5>
@@ -197,7 +262,13 @@
               </div>
             </div>
             <div class="col-md-4 mb-5">
-              <div class="card">
+              <div
+                class="card"
+                data-aos="fade-up-left"
+                data-aos-offset="200"
+                data-aos-delay="200"
+                data-aos-duration="850"
+              >
                 <img src="img/5.jpg" class="card-img-top" alt="Wraith" />
                 <div class="card-body">
                   <h5 class="card-title">Wraith</h5>
@@ -275,7 +346,7 @@
                   name="Name"
                 />
               </div>
-              <div id="contact" class="mb-3">
+              <div id="contact" class="mb-5">
                 <label for="Message" class="form-label">Message</label>
                 <textarea
                   class="form-control"
@@ -362,7 +433,12 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
-
+    <!--AOS-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!--AOS Akhir-->
     <script>
       const scriptURL =
         "https://script.google.com/macros/s/AKfycbx_JO549tzPBdk-FCDOI5td3LqK1ML-srJYbjznCuYL7i_8i77lcdUwjaFBq7WE1xo_/exec";
