@@ -300,6 +300,91 @@
     </section>
     <!--Akhir Portofolio-->
 
+    <!--Gallery-->
+    <section id="gallery">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>Gallery</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <a href="#">
+              <img
+                src="img/thumbnail/1.jpg"
+                alt="Gambar 1"
+                class="img-fluid gallery-img"
+              />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img
+                src="img/thumbnail/2.jpg"
+                alt="Gambar 2"
+                class="img-fluid gallery-img"
+              />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img
+                src="img/thumbnail/3.jpg"
+                alt="Gambar 3"
+                class="img-fluid gallery-img"
+              />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img
+                src="img/thumbnail/4.jpg"
+                alt="Gambar 4"
+                class="img-fluid gallery-img"
+              />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img
+                src="img/thumbnail/5.jpg"
+                alt="Gambar 5"
+                class="img-fluid gallery-img"
+              />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img
+                src="img/thumbnail/6.jpg"
+                alt="Gambar 6"
+                class="img-fluid gallery-img"
+              />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img
+                src="img/thumbnail/7.jpg"
+                alt="Gambar 7"
+                class="img-fluid gallery-img"
+              />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img
+                src="img/thumbnail/8.jpg"
+                alt="Gambar 8"
+                class="img-fluid gallery-img"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Akhir Gallery-->
     <!--Contact-->
     <section class="contact mb-5">
       <div class="container">
@@ -436,6 +521,18 @@
     <!--AOS-->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
+      https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js
+    </script>
+    <script>
+      gsap.from(".lead, {duration: 1, y: -100, opacity: 0}");
+    </script>
+    <script>
+      const galleryImage = document.querySelectorAll(".gallery-img");
+
+      galleryImage.forEach((img, i) => {
+        img.dataset.aos = "fade-down";
+        img.dataset.aosDelay = i * 100;
+      });
       AOS.init();
     </script>
     <!--AOS Akhir-->
